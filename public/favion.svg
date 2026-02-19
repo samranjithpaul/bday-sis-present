@@ -1,0 +1,181 @@
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main purple base gradient -->
+    <linearGradient id="purpleBase" x1="100" y1="30" x2="100" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="25%" stop-color="#9333ea"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="75%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </linearGradient>
+    
+    <!-- Bright top highlight - almost white -->
+    <linearGradient id="topBright" x1="100" y1="45" x2="100" y2="105" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#faf5ff" stop-opacity="1"/>
+      <stop offset="25%" stop-color="#f3e8ff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#e9d5ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0.2"/>
+    </linearGradient>
+    
+    <!-- Dark bottom shadow -->
+    <linearGradient id="bottomShadow" x1="100" y1="95" x2="100" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3b1a7a" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#4c1d95" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#5b21b6" stop-opacity="0.6"/>
+    </linearGradient>
+    
+    <!-- Center intersection stripe - light grey/silver -->
+    <linearGradient id="centerStripe" x1="82" y1="82" x2="118" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="30%" stop-color="#f9fafb" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#f2f2f2" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#e5e7eb" stop-opacity="0.8"/>
+    </linearGradient>
+    
+    <!-- Left loop top edge highlight -->
+    <linearGradient id="leftTop" x1="30" y1="52" x2="68" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
+      <stop offset="40%" stop-color="#faf5ff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#f3e8ff" stop-opacity="0.5"/>
+    </linearGradient>
+    
+    <!-- Right loop top edge highlight -->
+    <linearGradient id="rightTop" x1="170" y1="52" x2="132" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
+      <stop offset="40%" stop-color="#faf5ff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#f3e8ff" stop-opacity="0.5"/>
+    </linearGradient>
+    
+    <!-- Inner intersection shadow -->
+    <radialGradient id="innerDark" cx="100" cy="100" r="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#312e81" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#4c1d95" stop-opacity="0.3"/>
+    </radialGradient>
+    
+    <!-- Glossy surface reflection -->
+    <linearGradient id="surfaceReflection" x1="100" y1="38" x2="100" y2="162" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="18%" stop-color="#f3e8ff" stop-opacity="0.25"/>
+      <stop offset="42%" stop-color="transparent" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#4c1d95" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Black background -->
+  <rect width="200" height="200" fill="#0a0a0f"/>
+  
+  <!-- Main infinity symbol - smooth figure-eight -->
+  <path d="M 52 100 
+           C 42 100, 38 92, 40 82
+           C 43 67, 53 57, 68 57
+           C 80 57, 88 62, 92 72
+           C 96 62, 104 57, 116 57
+           C 131 57, 141 67, 144 82
+           C 146 92, 142 100, 132 100
+           C 142 108, 146 118, 144 128
+           C 141 143, 131 153, 116 153
+           C 104 153, 96 148, 92 138
+           C 88 148, 80 153, 68 153
+           C 53 153, 43 143, 40 128
+           C 38 118, 42 108, 52 100 Z" 
+        fill="url(#purpleBase)"/>
+  
+  <!-- Inner shadow at intersection for depth -->
+  <ellipse cx="100" cy="100" rx="20" ry="30" fill="url(#innerDark)" opacity="0.75"/>
+  
+  <!-- Center diagonal stripe - prominent light grey/silver -->
+  <ellipse cx="100" cy="100" rx="14" ry="22" fill="url(#centerStripe)" opacity="0.92" transform="rotate(-43 100 100)"/>
+  
+  <!-- Center stripe highlight line -->
+  <line x1="90" y1="90" x2="110" y2="110" 
+        stroke="#ffffff" 
+        stroke-width="2.8" 
+        stroke-linecap="round"
+        opacity="0.96"/>
+  
+  <!-- Top edge highlight - left loop (bright white) -->
+  <path d="M 40 82 
+           C 43 70, 50 60, 63 58
+           C 72 57, 80 59, 86 65" 
+        stroke="url(#leftTop)" 
+        stroke-width="4" 
+        stroke-linecap="round"
+        fill="none"/>
+  
+  <!-- Top edge highlight - right loop (bright white) -->
+  <path d="M 144 82 
+           C 141 70, 134 60, 121 58
+           C 112 57, 104 59, 98 65" 
+        stroke="url(#rightTop)" 
+        stroke-width="4" 
+        stroke-linecap="round"
+        fill="none"/>
+  
+  <!-- Sharp top-left edge highlight for left loop -->
+  <path d="M 40 82 C 41 75, 44 67, 50 62" 
+        stroke="#ffffff" 
+        stroke-width="2.5" 
+        stroke-linecap="round"
+        opacity="0.95"
+        fill="none"/>
+  
+  <!-- Sharp top-right edge highlight for right loop -->
+  <path d="M 144 82 C 143 75, 140 67, 134 62" 
+        stroke="#ffffff" 
+        stroke-width="2.5" 
+        stroke-linecap="round"
+        opacity="0.95"
+        fill="none"/>
+  
+  <!-- Bottom shadow - left loop -->
+  <path d="M 52 100 
+           C 42 108, 38 118, 40 128
+           C 43 143, 53 153, 68 153" 
+        stroke="url(#bottomShadow)" 
+        stroke-width="4.5" 
+        stroke-linecap="round"
+        fill="none"
+        opacity="0.85"/>
+  
+  <!-- Bottom shadow - right loop -->
+  <path d="M 132 100 
+           C 142 108, 146 118, 144 128
+           C 141 143, 131 153, 116 153" 
+        stroke="url(#bottomShadow)" 
+        stroke-width="4.5" 
+        stroke-linecap="round"
+        fill="none"
+        opacity="0.85"/>
+  
+  <!-- Glossy surface overlay for reflective finish -->
+  <path d="M 52 100 
+           C 42 100, 38 92, 40 82
+           C 43 67, 53 57, 68 57
+           C 80 57, 88 62, 92 72
+           C 96 62, 104 57, 116 57
+           C 131 57, 141 67, 144 82
+           C 146 92, 142 100, 132 100
+           C 142 108, 146 118, 144 128
+           C 141 143, 131 153, 116 153
+           C 104 153, 96 148, 92 138
+           C 88 148, 80 153, 68 153
+           C 53 153, 43 143, 40 128
+           C 38 118, 42 108, 52 100 Z" 
+        fill="url(#surfaceReflection)"/>
+  
+  <!-- Additional top glow for extra brightness -->
+  <path d="M 40 82 C 43 67, 53 57, 68 57 C 80 57, 88 62, 92 72" 
+        stroke="url(#topBright)" 
+        stroke-width="6" 
+        stroke-linecap="round"
+        fill="none"
+        opacity="0.4"/>
+  <path d="M 144 82 C 141 67, 131 57, 116 57 C 104 57, 96 62, 92 72" 
+        stroke="url(#topBright)" 
+        stroke-width="6" 
+        stroke-linecap="round"
+        fill="none"
+        opacity="0.4"/>
+</svg>

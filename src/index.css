@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 50% 96%;
+    --foreground: 20 30% 20%;
+
+    --card: 340 40% 97%;
+    --card-foreground: 20 30% 20%;
+
+    --popover: 30 50% 96%;
+    --popover-foreground: 20 30% 20%;
+
+    --primary: 340 60% 75%;
+    --primary-foreground: 20 30% 15%;
+
+    --secondary: 270 40% 85%;
+    --secondary-foreground: 270 30% 25%;
+
+    --muted: 30 30% 92%;
+    --muted-foreground: 20 15% 45%;
+
+    --accent: 200 50% 82%;
+    --accent-foreground: 200 40% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 30% 88%;
+    --input: 340 30% 88%;
+    --ring: 340 60% 75%;
+
+    --radius: 1rem;
+
+    --lavender: 270 40% 85%;
+    --baby-blue: 200 50% 82%;
+    --cream: 40 60% 94%;
+    --soft-pink: 340 60% 90%;
+    --warm-peach: 20 60% 88%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lora', serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Caveat', cursive;
+  }
+}
+
+@layer components {
+  .font-handwritten {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font-cursive {
+    font-family: 'Caveat', cursive;
+  }
+
+  .font-serif {
+    font-family: 'Lora', serif;
+  }
+
+  .scrapbook-border {
+    border: 2px dashed hsl(var(--primary) / 0.4);
+    border-radius: var(--radius);
+    box-shadow: 4px 4px 0px hsl(var(--primary) / 0.15);
+  }
+
+  .pastel-glow {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3), 0 0 40px hsl(var(--lavender) / 0.15);
+  }
+
+  .tape-effect {
+    position: relative;
+  }
+
+  .tape-effect::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 60px;
+    height: 20px;
+    background: hsl(var(--cream) / 0.8);
+    border: 1px solid hsl(var(--border));
+    z-index: 1;
+  }
+
+  .paper-shadow {
+    box-shadow: 
+      2px 2px 5px hsl(var(--foreground) / 0.08),
+      0 0 0 1px hsl(var(--border) / 0.5);
+  }
+
+  .sparkle-text {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--secondary)),
+      hsl(var(--accent)),
+      hsl(var(--primary))
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: sparkle-shift 4s ease-in-out infinite;
+  }
+}
+
+@keyframes sparkle-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(3deg); }
+}
+
+@keyframes float-heart {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.4; }
+  100% {
+    transform: translateY(-10vh) rotate(360deg) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100px) rotate(720deg); opacity: 0; }
+}
+
+@keyframes envelope-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes gentle-sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
